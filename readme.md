@@ -29,6 +29,7 @@ Inside .env
 This needs to be unique!
 ```
 APP_NAME=project_name
+WP_CLI_VERSION=wp_cli_version #only for wordpress installations
 ```
 
 ## Switching mysql versions
@@ -45,14 +46,3 @@ Uncomment extension name in php.ini
 
 ## Browsing ngnix error & access logs
 Logs will appear in .docker/logs directory
-
-## Excluding docker files from git tracking
-edit .git/info/exclude
-
-add this files at the bottom
-```
-.docker
-.env
-Dockerfile
-docker-compose.yml
-```
