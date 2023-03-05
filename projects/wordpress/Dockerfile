@@ -23,3 +23,5 @@ RUN apk --no-cache add shadow && usermod -u 1000 www-data
 COPY .docker/xdebug/xdebug.ini "${PHP_INI_DIR}/conf.d"
 
 RUN chown -R www-data:www-data /var/www/html
+
+USER www-data

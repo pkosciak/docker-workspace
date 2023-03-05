@@ -21,14 +21,6 @@ services:
       - ./certs:/etc/certs:ro
     networks:
       - proxy
-  mail_server:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./ssmtp.conf:/etc/ssmtp/ssmtp.conf
-    networks:
-      - proxy
 
 networks:
   proxy:

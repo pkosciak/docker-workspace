@@ -1,5 +1,5 @@
 ## Generating certs
-Inside traefik container:
+Inside traefik/certs:
 ```
 mkcert -install
 mkcert -cert-file certs/local-cert.pem -key-file certs/local-key.pem "docker.localhost" "*.docker.localhost"
@@ -7,8 +7,9 @@ mkcert -cert-file certs/local-cert.pem -key-file certs/local-key.pem "docker.loc
 
 On local machine:
 ```
+choco install mkcert
 mkcert -install
-mkcert docker.localhost
+mkcert "docker.localhost" "*.docker.localhost"
 ```
 
 ## Setting up smtp
